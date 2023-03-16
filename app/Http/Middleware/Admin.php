@@ -20,6 +20,8 @@ class Admin
             $user = auth()->user();
             if($user->Admin && $user->Admin->role == "ADMIN"){
                 return $next($request);
+            } elseif ($user->Admin && $user->Admin->role == "TEACHER"){
+                return $next($request);
             }
         }
         return abort(404);

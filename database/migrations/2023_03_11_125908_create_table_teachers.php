@@ -19,6 +19,7 @@ class CreateTableTeachers extends Migration
             $table->boolean("gender")->default(true);
             $table->string("email",70);
             $table->text("address");
+            $table->timestamps();
         });
     }
 

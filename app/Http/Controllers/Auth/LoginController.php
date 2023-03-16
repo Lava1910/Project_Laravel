@@ -43,6 +43,9 @@ class LoginController extends Controller
     {
         if ($user->Admin && $user->Admin->role == "ADMIN"){
             return redirect()->to(RouteServiceProvider::ADMIN);
+        } elseif ($user->Admin && $user->Admin->role == "TEACHER"){
+            return redirect()->to(RouteServiceProvider::TEACHER);
+
         }
     }
 }

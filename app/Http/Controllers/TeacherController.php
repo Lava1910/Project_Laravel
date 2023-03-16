@@ -11,4 +11,6 @@ class TeacherController extends Controller
         $course = Course::all();
         return view("user.teacher.home",["courses"=>$course]);
     }
+
+
 }

@@ -17,6 +17,7 @@ class CreateTableCourses extends Migration
             $table->string("id",10)->primary();
             $table->string("name",100);
             $table->unsignedTinyInteger("qty");
+            $table->timestamps();
         });
     }
 

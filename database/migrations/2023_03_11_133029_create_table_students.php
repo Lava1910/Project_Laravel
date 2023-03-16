@@ -21,6 +21,7 @@ class CreateTableStudents extends Migration
             $table->text("address");
             $table->string("class_id",6);
             $table->foreign("class_id")->references("id")->on("classrooms");
+            $table->timestamps();
         });
     }
 

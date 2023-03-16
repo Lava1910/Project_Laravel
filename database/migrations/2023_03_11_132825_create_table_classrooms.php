@@ -15,10 +15,10 @@ class CreateTableClassrooms extends Migration
     {
         Schema::create('classrooms', function (Blueprint $table) {
             $table->string("id",10)->primary();
-            $table->string("name",50);
             $table->unsignedInteger("qty");
             $table->string("teacher_id",10);
             $table->foreign("teacher_id")->references("id")->on("teachers");
+            $table->timestamps();
         });
     }
 
