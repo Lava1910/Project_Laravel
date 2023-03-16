@@ -23,10 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
-    public function verify()
-    {
-        return view('auth.verify.blade');
+        return view('index');
     }
 }
