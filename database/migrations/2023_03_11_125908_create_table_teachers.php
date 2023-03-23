@@ -19,7 +19,9 @@ class CreateTableTeachers extends Migration
             $table->boolean("gender")->default(true);
             $table->string("email",70);
             $table->text("address");
+            $table->unsignedBigInteger("user_id");
             $table->timestamps();
+            $table->foreign("user_id")->references("id")->on("users");
         });
     }
 

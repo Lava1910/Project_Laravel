@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\User::factory(10)->create();
+//         \App\Models\User::factory(10)->create();
         $admin = User::create([
             "name"=>"admin",
             "email"=>"admin@localhost",
@@ -76,30 +76,30 @@ class DatabaseSeeder extends Seeder
             "user_id"=>$teacher5->id,
             "role"=>"TEACHER"
         ]);
-        Course::create(["id"=>"7023-JP1","name"=>"Java Programing-I","qty"=>20]);
-        Course::create(["id"=>"7023-JP2","name"=>"Java Programing-II","qty"=>20]);
-        Course::create(["id"=>"7023-PDLF","name"=>"PHP Development with Laravel Framework","qty"=>20]);
-        Course::create(["id"=>"7023-ISA","name"=>"Information Systems Analysis (NCC)","qty"=>20]);
-        Course::create(["id"=>"7023-MLJ","name"=>"Markup Language & JSON","qty"=>20]);
-        Course::create(["id"=>"7023-APC#","name"=>"Application Programming with C#","qty"=>20]);
+        Course::create(["id"=>"7021","name"=>"Java Programing-I"]);
+        Course::create(["id"=>"7022","name"=>"Java Programing-II"]);
+        Course::create(["id"=>"7023","name"=>"PHP Development with Laravel Framework"]);
+        Course::create(["id"=>"7024","name"=>"Information Systems Analysis (NCC)"]);
+        Course::create(["id"=>"7025","name"=>"Markup Language & JSON"]);
+        Course::create(["id"=>"7026","name"=>"Application Programming with C#"]);
 
         Teacher::create(["id"=>"GV001","name"=>"Nguyen Van A","gender"=>1,"email"=>"nguyenvana001@gmail.com",
-            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi"]);
+            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi","user_id"=>2]);
         Teacher::create(["id"=>"GV002","name"=>"Nguyen Thi B","gender"=>0,"email"=>"nguyenthib002@gmail.com",
-            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi"]);
+            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi","user_id"=>3]);
         Teacher::create(["id"=>"GV003","name"=>"Tran Thi C","gender"=>0,"email"=>"tranthic003@gmail.com",
-            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi"]);
+            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi","user_id"=>4]);
         Teacher::create(["id"=>"GV004","name"=>"Ngo Dinh D","gender"=>1,"email"=>"ngodinhd004@gmail.com",
-            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi"]);
+            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi","user_id"=>5]);
         Teacher::create(["id"=>"GV005","name"=>"Nguyen Van E","gender"=>1,"email"=>"nguyenvane005@gmail.com",
-            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi"]);
+            "address"=>"So 1 Nguyen Chi Thanh, Ba Dinh, Ha Noi","user_id"=>6]);
 
-        $class1 = Classroom::create(["id"=>"T2202A","qty"=>10,"teacher_id"=>"GV001"]);
-        $class2 = Classroom::create(["id"=>"T2202B","qty"=>11,"teacher_id"=>"GV001"]);
-        Classroom::create(["id"=>"T2202C","qty"=>11,"teacher_id"=>"GV002"]);
-        Classroom::create(["id"=>"T2202D","qty"=>10,"teacher_id"=>"GV002"]);
-        Classroom::create(["id"=>"T2202E","qty"=>12,"teacher_id"=>"GV003"]);
-        Classroom::create(["id"=>"T2202F","qty"=>10,"teacher_id"=>"GV004"]);
+        Classroom::create(["id"=>"T2202A","teacher_id"=>"GV001"]);
+        Classroom::create(["id"=>"T2202B","teacher_id"=>"GV001"]);
+        Classroom::create(["id"=>"T2202C","teacher_id"=>"GV002"]);
+        Classroom::create(["id"=>"T2202D","teacher_id"=>"GV002"]);
+        Classroom::create(["id"=>"T2202E","teacher_id"=>"GV003"]);
+        Classroom::create(["id"=>"T2202F","teacher_id"=>"GV003"]);
 
 //        Student::create(["id"=>"SV001","name"=>"Nguyễn Thiên An","gender"=>0,"email"=>"nguyenthienan001@gmail.com",
 //            "address"=>"So 2 Ho Dac Di, Dong Da, Ha Noi","class_id"=>]);

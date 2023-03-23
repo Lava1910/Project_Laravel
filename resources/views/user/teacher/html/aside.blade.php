@@ -13,9 +13,11 @@
             <div class="image">
                 <img src="images/admin-icon.png" class="img-circle elevation-2" alt="User Image">
             </div>
+            @if(Auth::check())
             <div class="info">
-                <a href="#" class="d-block"></a>
+                <a href="#" class="d-block">{{Auth::user()->name}}</a>
             </div>
+            @endif
         </div>
     </div>
 </aside>

@@ -14,4 +14,9 @@ class Course extends Model
       "name",
       "qty"
     ];
+
+    public function Session(){
+        return $this->hasMany(Session::class);
+    }
+
 }
